@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.Fullname}}</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="bg-[#F9FAFB] py-8 xl:px-[22%] px-[8%] flex flex-col gap-10">
+    <section class="flex flex-col items-center gap-8">
+      <header class="mx-auto flex flex-col gap-4 xl:gap-2">
+        <h1
+          class="text-5xl text-center font-bold font-['Signika'] text-[#111827]"
+        >
+          Jacob Mary Tapere
+        </h1>
+        <p
+          class="text-lg font-['Signika'] text-[#111827] tracking-widest text-center"
+        >
+          Aspiring Software Developer | BSIT Student at UC - Banilad
+        </p>
+      </header>
+      <div class="xl:flex-row flex-col flex gap-10">
+        <p class="text-black flex-row">
+          <span class="p-1 bg-gray-500 rounded-full">✉</span>
+          jacobmary.tapere007@gmail.com
+        </p>
+        <p><span class="px-1 rounded-full">✆</span> 0993 223 7994</p>
+      </div>
+      <a
+        href="#myProjects"
+        class="bg-blue-500 px-4 py-2 rounded-lg text-white font-['Signika'] font-medium cursor-pointer active:scale-90"
+        >View My Projects</a
+      >
+    </section>
+    <section
+      id="about"
+      class="gap-4 px-2 py-10 flex flex-col items-center justify-center bg-white rounded-lg drop-shadow-md h-full xl:justify-start xl:items-start xl:px-20 xl:py-6 xl:grid xl:grid-cols-3"
+    >
+      <div class="">
+        <img
+          class="h-52 w-52 rounded-full"
+          src="/static/images/Profile_Picture.png"
+          alt="Profile Picture"
+        />
+      </div>
+      <div class="col-span-2 flex flex-col gap-10">
+        <h1
+          class="text-2xl font-['Signika'] font-bold text-[#111827] text-center xl:text-start"
+        >
+          About
+        </h1>
+        <p
+          class="text-justify leading-8 font-medium font-['Signika'] text-gray-700"
+        >
+          I am 4th year student taking up a Bachelor of Science in Information
+          Technology at University of Cebu – Banilad, seek to apply with a
+          strong foundation in both front-end, and back-end development and a
+          passion for creating user friendly web applications, I am eager to
+          contribute to your team while gaining hands-on experience in a dynamic
+          work environment. I offer my practical knowledge in IT concepts,
+          hands-on project experience.
+        </p>
+        <p
+          class="text-center flex flex-col font-['Signika'] font-medium xl:text-start"
+        >
+          🎓 Bachelor of Science in Information Technology
+          <span class="font-base text-gray-400"
+            >University Of Cebu - Banilad</br> 2022 - PRESENT</span
+          >
+        </p>
+        <p
+          class="text-center flex flex-col font-['Signika'] font-medium xl:text-start"
+        >
+          🎓 Bachelor Of Science Tourism Management
+          <span class="font-base text-gray-400"
+            >University Of San-Jose Recoletos </br> 2021 - Jan 2022</span
+          >
+        </p>
+      </div>
+    </section>
+    <section id="skills" class="bg-white drop-shadow-md rounded-lg px-5 xl:px-10 py-10 gap-5 flex flex-col"> 
+        <h1 class="font-['Signika'] font-bold text-2xl text-[#111827]">Skills</h1>
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+            <div class="flex flex-col gap-4">
+                <h1 class="font-['Signika'] text-lg text-[#111827]">Programming Languages</h1>
+                <div class="grid xl:grid-cols-3 gap-2">
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Javascript</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Typescript</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Go</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Kotlin</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Java</div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h1 class="font-['Signika'] text-lg text-[#111827]">Databases</h1>
+                <div class="grid xl:grid-cols-3 gap-2">
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">MySQL</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Firebase</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Appwrite</div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h1 class="font-['Signika'] text-lg text-[#111827]">Mobile Development and Design</h1>
+                <div class="grid xl:grid-cols-3 gap-2">
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">React Native</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Android Studio</div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h1 class="font-['Signika'] text-lg text-[#111827]">Web Development and Design</h1>
+                <div class="grid xl:grid-cols-3 gap-2">
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Next.js</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">React.js + Vite</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Express.js</div>
+                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Tailwind CSS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="#myProjects">
+
+    </section>
+  </body>
+</html>
