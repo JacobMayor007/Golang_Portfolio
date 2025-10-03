@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -127,8 +127,30 @@
             </div>
         </div>
     </section>
-    <section id="#myProjects">
-
+    <section id="myProjects" class="px-5 py-10 bg-white rounded-lg drop-shadow-md">
+        <div class="flex flex-col gap-2">
+            <div class="flex flex-row items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                <h1 class="font-['Signika'] font-medium text-[#111827] text-xl font-bold">
+                    Recent Projects
+                </h1>
+            </div>
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-2">
+                    <h1 class="font-bold text-[#111827] text-lg">RubberTapAI - 2025 (Currently Working)</h1>
+                    <p class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg">An Machine Learning application for the rubber industry that uses image classification to detect leaf diseases</p>
+                </div>
+                <div>
+                    <h1 class="font-bold text-[#111827] text-lg">Pet Care Pro(2024)</h1>
+                  <p class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg">A web-based application E-commerce for pet’s platform that connects pet owners and pet care providers to facilitate 
+                        easy access to pet care services. </p>
+                </div>
+                <div>
+                   <h1 class="font-bold text-[#111827] text-lg">Smart Dustbin (2025) </h1>
+                  <p class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg">A simple IoT-based smart trash bin that automatically opens its lid using a proximity sensor.</p>
+                </div>
+            </div>
+        </div>
     </section>
   </body>
 </html>
