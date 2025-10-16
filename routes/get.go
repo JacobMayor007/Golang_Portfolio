@@ -22,12 +22,7 @@ func Projects(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "projects.html", data)
 }
 
-func Skills(w http.ResponseWriter, r *http.Request) {
-	data := model.Dev
-	data.Title = "Skills - " + model.Dev.Fullname
-	data.Page = "skills"
-	renderTemplate(w, "skills.html", data)
-}
+
 
 func About(w http.ResponseWriter, r *http.Request) {
 	data := model.Dev

@@ -42,14 +42,22 @@
   </head>
   <body class="bg-[#F9FAFB] xl:px-[22%] px-[8%] flex flex-col gap-5">
     <section
-      class="flex flex-col items-center px-10 gap-6 h-full mt-8 bg-white drop-shadow-md rounded-xl"
+      class="flex flex-col px-10 gap-6 h-full mt-8 bg-white drop-shadow-md rounded-xl"
     >
-      <div class="mt-10 text-center gap-2 flex-col flex">
+      <a href="/index">
+        <img
+          src="/static/images/back-arrow.jpg"
+          alt="Back arrow"
+          class="h-10 w-10 mt-5"
+        />
+      </a>
+      <div class="text-center gap-2 flex-col flex items-center">
         <h1 class="font-['Signika'] text-[#111827] font-bold text-3xl">
           About Me
         </h1>
         <img
           src="/static/images/About_Picture.jpg"
+          draggable="false"
           alt="Jacob Mary Working"
           class="h-52 w-52 rounded-full"
         />
@@ -59,7 +67,7 @@
         <p class="font-['Signika'] font-medium">Aspiring Software Engineer</p>
       </div>
       <div
-        class="h-full mb-10 w-full indent-10 text-justify font-['Signika'] px-10 md:px-20 leading-8 2xl:px-40"
+        class="h-full mb-10 w-full indent-10 text-justify font-['Signika'] md:px-20 leading-8 2xl:px-40"
       >
         I am currently a 4th-year student pursuing a Bachelor of Science in
         Information Technology at the University of Cebu – Banilad. Previously,
@@ -75,15 +83,15 @@
       </div>
     </section>
     <section
-      class="flex flex-col items-center px-10 pb-8 gap-6 h-screen mt-8 bg-white drop-shadow-md rounded-xl"
+      class="flex flex-col items-center px-10 pb-8 gap-6 h-full mt-8 bg-white drop-shadow-md rounded-xl lg:h-screen 2xl:h-full"
     >
       <h1 class="font-['Signika'] text-[#111827] font-bold text-3xl mt-10">
         Achievements
       </h1>
 
-      <div class="flex flex-col justify-around h-full">
-        <div class="grid grid-cols-2">
-          <div class="flex flex-col gap-4 items-center justify-around">
+      <div class="flex flex-col gap-10 justify-around h-full">
+        <div class="lg:grid lg:grid-cols-2">
+          <div class="flex flex-col gap-4 mb-4 items-center justify-around">
             <h1 class="font-['Signika'] text-lg font-semibold text-center">
               UC CCS 11th ICT Congress: <br />
               Networking Competition &hyphen; 2nd Place (2025)
@@ -104,8 +112,8 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-2">
-          <div class="flex flex-col gap-4 items-center justify-around">
+        <div class="lg:grid lg:grid-cols-2 h-full">
+          <div class="flex flex-col gap-4 mb-4 items-center justify-around">
             <h1 class="font-['Signika'] text-lg font-semibold text-center">
               Certificate of Completion: <br />
               Cisco Networking Academy (2025)

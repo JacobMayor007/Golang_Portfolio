@@ -14,7 +14,6 @@ func main() {
 	// Routes
 	http.HandleFunc("/", routes.Home)
 	http.HandleFunc("/projects", routes.Projects)
-	http.HandleFunc("/skills", routes.Skills)
 	http.HandleFunc("/about", routes.About)
 	http.HandleFunc("/contact", routes.Contact)
 
