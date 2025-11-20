@@ -22,8 +22,6 @@ func Projects(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "projects.html", data)
 }
 
-
-
 func About(w http.ResponseWriter, r *http.Request) {
 	data := model.Dev
 	data.Title = "About - " + model.Dev.Fullname
