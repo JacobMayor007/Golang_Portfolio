@@ -6,7 +6,20 @@ import (
 	"net/http"
 )
 
-var templates = template.Must(template.ParseGlob("view/*.html"))
+var templates *template.Template
+
+func init() {
+
+	var err error
+	templates, err = template.ParseFiles(
+		"index.html",
+		"projects.html",
+		"about.html",
+	)
+	if err != nil {
+		panic(err)
+	}
+}
 
 func Home(w http.ResponseWriter, r *http.Request) {
 	data := model.Dev
@@ -27,13 +40,6 @@ func About(w http.ResponseWriter, r *http.Request) {
 	data.Title = "About - " + model.Dev.Fullname
 	data.Page = "about"
 	renderTemplate(w, "about.html", data)
-}
-
-func Contact(w http.ResponseWriter, r *http.Request) {
-	data := model.Dev
-	data.Title = "Contact - " + model.Dev.Fullname
-	data.Page = "contact"
-	renderTemplate(w, "contact.html", data)
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, data model.Developer) {

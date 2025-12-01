@@ -15,7 +15,6 @@ func main() {
 	http.HandleFunc("/", routes.Home)
 	http.HandleFunc("/projects", routes.Projects)
 	http.HandleFunc("/about", routes.About)
-	http.HandleFunc("/contact", routes.Contact)
 
 	fmt.Println("🚀 Server is running on http://localhost:21123")
 	err := http.ListenAndServe(":21123", nil)
