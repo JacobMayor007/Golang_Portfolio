@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience — Jacob Mary Tapere</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        font-family: "Signika", sans-serif;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06),
+          0 4px 20px rgba(0, 0, 0, 0.06);
+        transition: box-shadow 0.25s ease, transform 0.25s ease;
+        overflow: hidden;
+      }
+      .card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08),
+          0 12px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+
+      /* top accent stripe */
+      .stripe-blue {
+        border-top: 4px solid #3b82f6;
+      }
+      .stripe-purple {
+        border-top: 4px solid #a855f7;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        border-radius: 999px;
+        padding: 4px 12px;
+        letter-spacing: 0.02em;
+      }
+      .badge-blue {
+        background: #eff6ff;
+        color: #1d4ed8;
+      }
+      .badge-purple {
+        background: #faf5ff;
+        color: #7e22ce;
+      }
+      .badge-green {
+        background: #f0fdf4;
+        color: #15803d;
+      }
+      .badge-gray {
+        background: #f3f4f6;
+        color: #374151;
+      }
+
+      .tech-tag {
+        display: inline-block;
+        background: #f1f5f9;
+        color: #334155;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 6px;
+        padding: 3px 10px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #f1f5f9;
+        margin: 20px 0;
+      }
+
+      .highlight-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 14px;
+        background: #f8fafc;
+        border-radius: 10px;
+        border-left: 3px solid;
+      }
+      .highlight-row.blue {
+        border-color: #3b82f6;
+      }
+      .highlight-row.purple {
+        border-color: #a855f7;
+      }
+
+      .highlight-icon {
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .section-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #9ca3af;
+        margin-bottom: 8px;
+      }
+
+      /* fade-up on load */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-up {
+        animation: fadeUp 0.5s ease both;
+      }
+      .delay-1 {
+        animation-delay: 0.1s;
+      }
+      .delay-2 {
+        animation-delay: 0.22s;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F9FAFB] min-h-screen">
+    <!-- Nav -->
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+      <div class="xl:px-[22%] px-[8%] flex items-center justify-between h-14">
+        <a
+          href="./index.html"
+          class="flex items-center gap-2 text-[#111827] font-bold text-lg hover:text-blue-500 transition-colors"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          Back to Portfolio
+        </a>
+        <span class="text-gray-400 text-sm font-medium hidden sm:block"
+          >Experience Details</span
+        >
+      </div>
+    </nav>
+
+    <!-- Page header -->
+    <div class="xl:px-[22%] px-[8%] pt-10 pb-4 fade-up">
+      <p class="text-xs font-bold tracking-widest text-blue-500 uppercase mb-1">
+        Career
+      </p>
+      <h1 class="text-3xl font-bold text-[#111827]">Experience</h1>
+      <p class="text-gray-500 mt-1 text-sm">
+        A detailed look at my professional background.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="xl:px-[22%] px-[8%] pb-16 flex flex-col gap-8 mt-6">
+      <!-- ── Card 1: Symph, Inc. ── -->
+      <div class="card stripe-blue fade-up delay-1">
+        <!-- Card header -->
+        <div class="px-6 pt-6 pb-5">
+          <div
+            class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3"
+          >
+            <div class="flex flex-col gap-1.5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="badge badge-blue">🏢 Internship / OJT</span>
+                <span class="badge badge-green">🟢 Currently Active</span>
+              </div>
+              <h2 class="text-xl font-bold text-[#111827] mt-1">
+                Full Stack Web / Mobile Developer
+              </h2>
+              <div
+                class="flex flex-wrap items-center gap-2 text-sm text-gray-500"
+              >
+                <span class="font-semibold text-gray-700">Symph, Inc.</span>
+                <span class="text-gray-300">•</span>
+                <span>Feb 2026 – Present</span>
+              </div>
+            </div>
+            <!-- Duration pill -->
+            <span class="badge badge-gray self-start whitespace-nowrap"
+              >~2 mos</span
+            >
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Project -->
+        <div class="px-6 pb-4">
+          <p class="section-label">Project</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0"
+            >
+              <img
+                src="/static/images/FlyingTigersExpress.png"
+                alt="Flying Tigers Express Logo"
+              />
+            </div>
+            <div>
+              <p class="font-bold text-[#111827]">Flying Tigers Express</p>
+              <p class="text-xs text-gray-400">Internal enterprise platform</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Role & team -->
+        <div class="px-6 pb-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <p class="section-label">Role in Team</p>
+            <p class="text-[#111827] font-semibold text-sm">
+              Full Stack Developer
+            </p>
+            <p class="text-gray-500 text-xs mt-0.5">
+              Web &amp; Mobile platforms
+            </p>
+          </div>
+          <div>
+            <p class="section-label">Team Size</p>
+            <div class="flex items-center gap-2">
+              <div class="flex -space-x-1.5">
+                <div
+                  class="w-6 h-6 rounded-full bg-blue-200 border-2 border-white flex items-center justify-center text-blue-700 text-xs font-bold"
+                >
+                  J
+                </div>
+                <div
+                  class="w-6 h-6 rounded-full bg-indigo-200 border-2 border-white"
+                ></div>
+                <div
+                  class="w-6 h-6 rounded-full bg-sky-200 border-2 border-white"
+                ></div>
+                <div
+                  class="w-6 h-6 rounded-full bg-violet-200 border-2 border-white flex items-center justify-center text-violet-700 text-xs font-bold"
+                >
+                  +12
+                </div>
+              </div>
+              <span class="text-sm text-gray-600 font-medium">15 members</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Responsibilities -->
+        <div class="px-6 pb-4">
+          <p class="section-label">Responsibilities &amp; Contributions</p>
+          <ul class="flex flex-col gap-2 mt-1">
+            <li class="flex gap-2 text-sm text-gray-700 leading-6">
+              <span class="text-blue-400 mt-1 flex-shrink-0">✦</span>
+              Resolved bugs and delivered quality-of-life adjustments across the
+              platform to improve reliability and user experience.
+            </li>
+            <li class="flex gap-2 text-sm text-gray-700 leading-6">
+              <span class="text-blue-400 mt-1 flex-shrink-0">✦</span>
+              Implemented a direct password reset flow to streamline account
+              recovery for end users.
+            </li>
+            <li class="flex gap-2 text-sm text-gray-700 leading-6">
+              <span class="text-blue-400 mt-1 flex-shrink-0">✦</span>
+              Built an admin-side approval workflow that triggers when a cost
+              value is reduced by 20% or more, adding an extra layer of control
+              for financial operations.
+            </li>
+            <li class="flex gap-2 text-sm text-gray-700 leading-6">
+              <span class="text-blue-400 mt-1 flex-shrink-0">✦</span>
+              Navigated and contributed to a large monorepo codebase,
+              identifying reusable utilities such as notification services and
+              applying them to new features.
+            </li>
+          </ul>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Tech stack -->
+        <div class="px-6 pb-4">
+          <p class="section-label">Tech Stack</p>
+          <div class="flex flex-wrap gap-2 mt-1">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Nest.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">TanStack Query</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Ant Design</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">EJS</span>
+            <span class="tech-tag">Monorepo</span>
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Highlight -->
+        <div class="px-6 pb-6">
+          <p class="section-label">Highlight</p>
+          <div class="highlight-row blue">
+            <span class="highlight-icon">🏅</span>
+            <p class="text-sm text-gray-700 leading-6">
+              Despite inheriting a large and complex codebase, successfully
+              understood the system's architecture and data flow well enough to
+              independently implement new features, fix bugs, and reuse existing
+              utilities — all within a professional team environment on an
+              active production product.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Card 2: Pet Care Pro ── -->
+      <div class="card stripe-purple fade-up delay-2">
+        <!-- Card header -->
+        <div class="px-6 pt-6 pb-5">
+          <div
+            class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3"
+          >
+            <div class="flex flex-col gap-1.5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="badge badge-purple">💼 Freelance</span>
+                <span class="badge badge-gray">✅ Completed</span>
+              </div>
+              <h2 class="text-xl font-bold text-[#111827] mt-1">
+                Full Stack Developer — Pet Care Pro
+              </h2>
+              <div
+                class="flex flex-wrap items-center gap-2 text-sm text-gray-500"
+              >
+                <span class="font-semibold text-gray-700"
+                  >Mr. Mark &amp; Associates</span
+                >
+                <span class="text-gray-300">•</span>
+                <span>Dec 2024 – May 2025</span>
+              </div>
+            </div>
+            <span class="badge badge-gray self-start whitespace-nowrap"
+              >~6 mos</span
+            >
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Project -->
+        <div class="px-6 pb-4">
+          <p class="section-label">Project</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center flex-shrink-0"
+            >
+              <span class="text-base">🐾</span>
+            </div>
+            <div>
+              <p class="font-bold text-[#111827]">Pet Care Pro</p>
+              <p class="text-xs text-gray-400">
+                All-in-one pet care web platform
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Role & team -->
+        <div class="px-6 pb-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <p class="section-label">Role in Team</p>
+            <p class="text-[#111827] font-semibold text-sm">
+              Sole Full Stack Developer
+            </p>
+            <p class="text-gray-500 text-xs mt-0.5">
+              Frontend · Backend · Database
+            </p>
+          </div>
+          <div>
+            <p class="section-label">Team Size</p>
+            <div class="flex items-center gap-2">
+              <div
+                class="w-6 h-6 rounded-full bg-purple-200 border-2 border-white flex items-center justify-center text-purple-700 text-xs font-bold"
+              >
+                J
+              </div>
+              <span class="text-sm text-gray-600 font-medium"
+                >Solo project</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Features -->
+        <div class="px-6 pb-4">
+          <p class="section-label">Platform Features Delivered</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
+            <div
+              class="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2"
+            >
+              <span>🩺</span> Pet Doctor Consultations
+            </div>
+            <div
+              class="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2"
+            >
+              <span>🏠</span> Pet Boarding &amp; Room Rentals
+            </div>
+            <div
+              class="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2"
+            >
+              <span>🛍️</span> Pet Shop
+            </div>
+            <div
+              class="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2"
+            >
+              <span>🤝</span> Pet Sitter Booking
+            </div>
+            <div
+              class="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2"
+            >
+              <span>🕊️</span> Memorial Services
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Responsibilities -->
+        <div class="px-6 pb-4">
+          <p class="section-label">Responsibilities</p>
+          <ul class="flex flex-col gap-2 mt-1">
+            <li class="flex gap-2 text-sm text-gray-700 leading-6">
+              <span class="text-purple-400 mt-1 flex-shrink-0">✦</span>
+              Translated all client requirements into a fully functional web
+              application, owning every layer of the stack from UI to database.
+            </li>
+            <li class="flex gap-2 text-sm text-gray-700 leading-6">
+              <span class="text-purple-400 mt-1 flex-shrink-0">✦</span>
+              Designed and implemented real-time data synchronization using
+              Firebase for seamless interaction across all platform modules.
+            </li>
+            <li class="flex gap-2 text-sm text-gray-700 leading-6">
+              <span class="text-purple-400 mt-1 flex-shrink-0">✦</span>
+              Built and styled a consistent, responsive UI across five distinct
+              service modules using Next.js, Tailwind CSS, and Ant Design.
+            </li>
+            <li class="flex gap-2 text-sm text-gray-700 leading-6">
+              <span class="text-purple-400 mt-1 flex-shrink-0">✦</span>
+              Managed all client communication, requirement gathering, and
+              delivery independently throughout the project lifecycle.
+            </li>
+          </ul>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Tech stack -->
+        <div class="px-6 pb-4">
+          <p class="section-label">Tech Stack</p>
+          <div class="flex flex-wrap gap-2 mt-1">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Ant Design</span>
+          </div>
+        </div>
+
+        <hr class="divider mx-6" />
+
+        <!-- Highlight -->
+        <div class="px-6 pb-6">
+          <p class="section-label">Highlight</p>
+          <div class="highlight-row purple">
+            <span class="highlight-icon">🏅</span>
+            <p class="text-sm text-gray-700 leading-6">
+              As the sole developer, successfully delivered all project
+              deliverables on time — including five fully functional platform
+              modules — demonstrating strong self-management, end-to-end
+              ownership, and the ability to independently handle a full-scale
+              client project from discovery to deployment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center font-['Signika'] text-gray-400 text-xs pb-8">
+      © 2026 Jacob Mary Tapere. All rights reserved.
+    </footer>
+  </body>
+</html>

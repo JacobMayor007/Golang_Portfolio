@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jacob Mary Tapere</title>
-    <meta name="description" content="My Name is Jacob Mary Tapere, a BSIT student at University of Cebu - Banilad. Experience in React.js + Vite, React Native, and a little bit of Golang.">
-    <meta property="og:title" content="Jacob Mary Tapere - Portfolio">
-    <meta property="og:image" content="/static/images/Profile_Picture.png">
-    <meta property="og:description" content="Explore my projects and skills in React, React Native, Golang, and more.">
-    <meta name="google-site-verification" content="QsGSOVqDCQxfeLjEQNl68TP9KuckrE3z14djdSvKBmY" />    
-    <meta name="author" content="Jacob Mary Tapere">
-    <meta name="keywords" content="Jacob Mary Tapere, Portfolio, BSIT, React, React Native, Golang, University of Cebu">
-    <meta name="keywords" content="Jacob Mary Tapere">
-    <meta name="keywords" content="Jacob Mary Tapere - Portfolio">
+    <meta
+      name="description"
+      content="My Name is Jacob Mary Tapere, a BSIT student at University of Cebu - Banilad. Experience in React.js + Vite, React Native, and a little bit of Golang."
+    />
+    <meta property="og:title" content="Jacob Mary Tapere - Portfolio" />
+    <meta property="og:image" content="/static/images/Profile_Picture.png" />
+    <meta
+      property="og:description"
+      content="Explore my projects and skills in React, React Native, Golang, and more."
+    />
+    <meta
+      name="google-site-verification"
+      content="QsGSOVqDCQxfeLjEQNl68TP9KuckrE3z14djdSvKBmY"
+    />
+    <meta name="author" content="Jacob Mary Tapere" />
+    <meta
+      name="keywords"
+      content="Jacob Mary Tapere, Portfolio, BSIT, React, React Native, Golang, University of Cebu"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
@@ -25,154 +35,511 @@
       type="image/x-icon"
     />
   </head>
-  <body class="bg-[#F9FAFB] py-8 xl:px-[22%] px-[8%] flex flex-col gap-10">
-    <section class="flex flex-col items-center gap-8 ">
-      <header class="mx-auto flex flex-col gap-4 xl:gap-2">
-        <h1
-          class="text-5xl text-center font-bold font-['Signika'] text-[#111827]"
-        >
-          Jacob Mary Tapere
-        </h1>
-        <p
-          class="text-lg font-['Signika'] text-[#111827] tracking-widest text-center"
-        >
-          Aspiring Software Engineer | BSIT Student at UC - Banilad
-        </p>
-      </header>
-      <div class="xl:flex-row flex-col flex gap-10">
-        <p class="text-black flex-row">
-          <span class="p-1 bg-gray-500 rounded-full">✉</span>
-          jacobmary.tapere007@gmail.com
-        </p>
-        <p><span class="px-1 rounded-full">✆</span> 0993 223 7994</p>
-      </div>
-      <div class="flex flex-row items-center justify-between w-full">
+  <body class="bg-[#F9FAFB] flex flex-col">
+    <!-- ── Nav Header ── -->
+    <nav class="sticky top-0 z-50 bg-white drop-shadow-sm">
+      <div class="xl:px-[22%] px-[8%] flex items-center justify-between h-14">
         <a
-        href="#myProjects"
-        class="bg-blue-500 px-4 py-2 rounded-lg hover:scale-105 active:scale-90 text-white font-['Signika'] font-medium cursor-pointer active:scale-90"
-        >View My Projects</a
-      >
-      <a
-        href="./pechakucha.html"
-        class="bg-blue-500 px-4 py-2 rounded-lg hover:scale-105 active:scale-90 text-white font-['Signika'] font-medium cursor-pointer active:scale-90"
-        >My Pechakucha Presentation</a
-      >
-      </div>
-    </section>
-    <section
-      id="about"
-      class="gap-4 px-2 py-10 flex flex-col items-center justify-center bg-white rounded-lg drop-shadow-md h-full xl:justify-start xl:items-start xl:px-20 xl:py-6 xl:grid xl:grid-cols-3"
-    >
-      <div class="">
-        <img
-          class="h-52 w-52 rounded-full"
-          src="/static/images/Profile_Picture.png"
-          alt="Profile Picture"
-        />
-      </div>
-      <div class="col-span-2 flex flex-col gap-10">
-        <p
-          onclick="navigateTo('about')"
-          class="text-xl font-['Signika'] hover:scale-105 active:scale-90 cursor-pointer font-medium text-white text-center xl:text-start bg-blue-500 rounded-lg w-fit px-4 py-2"
+          href="#"
+          class="font-['Signika'] font-bold text-[#111827] text-lg whitespace-nowrap"
+          >JMT</a
         >
-          About
-      </p>
-        <p
-          class="text-justify leading-8 font-medium font-['Signika'] text-gray-700"
-        >
-          I am 4th year student taking up a Bachelor of Science in Information
-          Technology at University of Cebu – Banilad, seek to apply with a
-          strong foundation in both front-end, and back-end development and a
-          passion for creating user friendly web applications, I am eager to
-          contribute to your team while gaining hands-on experience in a dynamic
-          work environment. I offer my practical knowledge in IT concepts,
-          hands-on project experience.
-        </p>
-        <p
-          class="text-center flex flex-col font-['Signika'] font-medium xl:text-start"
-        >
-          🎓 Bachelor of Science in Information Technology
-          <span class="font-base text-gray-400"
-            >University Of Cebu - Banilad</br> 2022 - PRESENT</span
-          >
-        </p>
-        <p
-          class="text-center flex flex-col font-['Signika'] font-medium xl:text-start"
-        >
-          🎓 Bachelor Of Science Tourism Management
-          <span class="font-base text-gray-400"
-            >University Of San-Jose Recoletos </br> 2021 - Jan 2022</span
-          >
-        </p>
-      </div>
-    </section>
-    <section id="skills" class="bg-white drop-shadow-md rounded-lg px-5 xl:px-10 py-10 gap-5 flex flex-col"> 
-        <h1 class="font-['Signika'] font-bold text-2xl text-[#111827]">Skills</h1>
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
-            <div class="flex flex-col gap-4">
-                <h1 class="font-['Signika'] text-lg text-[#111827]">Programming Languages</h1>
-                <div class="grid xl:grid-cols-3 gap-2">
-                    <div class="py-1 bg-gray-200 rounded-md text-center items-center justify-center">Javascript</div>
-                    <div class="py-1 bg-gray-200 rounded-md text-center items-center justify-center">Typescript</div>
-                    <div class="py-1 bg-gray-200 rounded-md text-center items-center justify-center">Kotlin Programming</div>
-                </div>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h1 class="font-['Signika'] text-lg text-[#111827]">Databases</h1>
-                <div class="grid xl:grid-cols-3 gap-2">
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">MySQL</div>
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Firebase</div>
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Appwrite</div>
-                </div>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h1 class="font-['Signika'] text-lg text-[#111827]">Mobile Development and Design</h1>
-                <div class="grid xl:grid-cols-3 gap-2">
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">React Native</div>
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Android Studio</div>
-                </div>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h1 class="font-['Signika'] text-lg text-[#111827]">Web Development and Design</h1>
-                <div class="grid xl:grid-cols-3 gap-2">
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Next.js</div>
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">React.js + Vite</div>
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Express.js</div>
-                    <div class="py-1 bg-gray-200 rounded-md text-center justify-center">Tailwind CSS</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="myProjects" class="px-5 py-10 bg-white rounded-lg drop-shadow-md">
-        <div class="flex flex-col gap-2">
-            <div onclick="navigateTo('projects')" class="flex flex-row items-center gap-2 bg-blue-500 w-fit px-4 py-2 rounded-lg cursor-pointer hover:scale-105 active:scale-90">
-                <svg class="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
-                <h1 class="font-['Signika'] font-medium text-[#111827] text-xl font-bold text-white">
-                    Recent Projects
-                </h1>
-            </div>
-            <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
-                <div class="flex flex-col gap-2">
-                    <h1 class="font-bold text-[#111827] text-lg">RubberTapAI (Jun, 2025) - (Dec, 2025) </h1>
-                    <p class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg">An Machine Learning application for the rubber industry that uses image classification to detect leaf diseases</p>
-                </div>
-                 <div>
-                   <h1 class="font-bold text-[#111827] text-lg">Smart Dustbin (Aug, 2025) - (Dec, 2025) </h1>
-                  <p class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg">A simple IoT-based smart trash bin that automatically opens its lid using a proximity sensor.</p>
-                </div>
-                <div>
-                    <h1 class="font-bold text-[#111827] text-lg">Pet Care Pro (Dec, 2024) - (April, 2025)</h1>
-                  <p class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg">A web-based application E-commerce for pet’s platform that connects pet owners and pet care providers to facilitate 
-                        easy access to pet care services. </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="text-center">
-      © 2026 Jacob Mary Tapere. All rights reserved.
-    </footer>
 
+        <!-- Desktop links -->
+        <ul
+          class="hidden md:flex items-center gap-6 font-['Signika'] font-medium text-[#111827]"
+        >
+          <li>
+            <a href="/about.html" class="hover:text-blue-500 transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="/experience.html"
+              class="hover:text-blue-500 transition-colors"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="/ski" class="hover:text-blue-500 transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="/projects.html"
+              class="hover:text-blue-500 transition-colors"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="./pechakucha.html"
+              class="bg-blue-500 text-white px-4 py-1.5 rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              PechaKucha
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="menuBtn"
+          class="md:hidden flex flex-col gap-1.5 p-1"
+          aria-label="Toggle menu"
+        >
+          <span
+            class="block w-6 h-0.5 bg-[#111827] transition-all duration-300"
+            id="bar1"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-[#111827] transition-all duration-300"
+            id="bar2"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-[#111827] transition-all duration-300"
+            id="bar3"
+          ></span>
+        </button>
+      </div>
+
+      <!-- Mobile dropdown -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white border-t border-gray-100 xl:px-[22%] px-[8%] py-4 flex flex-col gap-4 font-['Signika'] font-medium text-[#111827]"
+      >
+        <a
+          href="/about.html"
+          class="hover:text-blue-500 transition-colors"
+          onclick="closeMobileMenu()"
+          >About</a
+        >
+        <a
+          href="/experience.html"
+          class="hover:text-blue-500 transition-colors"
+          onclick="closeMobileMenu()"
+          >Experience</a
+        >
+        <a
+          href="#skills"
+          class="hover:text-blue-500 transition-colors"
+          onclick="closeMobileMenu()"
+          >Skills</a
+        >
+        <a
+          href="/projects.html"
+          class="hover:text-blue-500 transition-colors"
+          onclick="closeMobileMenu()"
+          >Projects</a
+        >
+        <a
+          href="/pechakucha.html"
+          class="bg-blue-500 text-white text-center px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          PechaKucha
+        </a>
+      </div>
+    </nav>
+
+    <!-- ── Page content ── -->
+    <div class="py-8 xl:px-[22%] px-[8%] flex flex-col gap-10">
+      <!-- Hero -->
+      <section class="flex flex-col items-center gap-8">
+        <header class="mx-auto flex flex-col gap-4 xl:gap-2">
+          <h1
+            class="text-5xl text-center font-bold font-['Signika'] text-[#111827]"
+          >
+            Jacob Mary Tapere
+          </h1>
+          <p
+            class="text-lg font-['Signika'] text-[#111827] tracking-widest text-center"
+          >
+            Aspiring Software Engineer | BSIT Student at UC - Banilad
+          </p>
+        </header>
+        <div class="xl:flex-row flex-col flex gap-10">
+          <p class="text-black">
+            <span class="p-1 bg-gray-500 rounded-full">✉</span>
+            jacobmary.tapere007@gmail.com
+          </p>
+          <p><span class="px-1 rounded-full">✆</span> 0993 223 7994</p>
+          <div class="flex gap-3">
+            <a
+              href="./static/resume/JACOB MARY TAPERE.pdf"
+              target="_blank"
+              class="inline-flex items-center gap-1.5 text-sm font-['Signika'] font-medium text-white bg-blue-600 border-[1.5px] border-blue-600 rounded-lg px-4 py-1.5 hover:bg-blue-700 transition-colors"
+            >
+              View Resume
+            </a>
+            <a
+              href="./static/resume/JACOB MARY TAPERE.pdf"
+              download
+              class="inline-flex items-center gap-1.5 text-sm font-['Signika'] font-medium text-gray-600 border-[1.5px] border-gray-300 rounded-lg px-4 py-1.5 hover:bg-gray-100 transition-colors"
+            >
+              Download
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section
+        id="about"
+        class="gap-4 px-2 py-10 flex flex-col items-center justify-center bg-white rounded-lg drop-shadow-md h-full xl:justify-start xl:items-start xl:px-20 xl:py-6 xl:grid xl:grid-cols-3"
+      >
+        <div>
+          <img
+            class="h-52 w-52 rounded-full"
+            src="/static/images/Profile_Picture.png"
+            alt="Profile Picture"
+          />
+        </div>
+        <div class="col-span-2 flex flex-col gap-10">
+          <p
+            class="text-xl font-['Signika'] font-medium text-white text-center xl:text-start bg-blue-500 rounded-lg w-fit px-4 py-2"
+          >
+            About
+          </p>
+          <p
+            class="text-justify leading-8 font-medium font-['Signika'] text-gray-700"
+          >
+            I am 4th year student taking up a Bachelor of Science in Information
+            Technology at University of Cebu – Banilad, seek to apply with a
+            strong foundation in both front-end, and back-end development and a
+            passion for creating user friendly web applications, I am eager to
+            contribute to your team while gaining hands-on experience in a
+            dynamic work environment. I offer my practical knowledge in IT
+            concepts, hands-on project experience.
+          </p>
+          <p
+            class="text-center flex flex-col font-['Signika'] font-medium xl:text-start"
+          >
+            🎓 Bachelor of Science in Information Technology
+            <span class="font-base text-gray-400"
+              >University Of Cebu - Banilad<br />
+              2022 - PRESENT</span
+            >
+          </p>
+          <p
+            class="text-center flex flex-col font-['Signika'] font-medium xl:text-start"
+          >
+            🎓 Bachelor Of Science Tourism Management
+            <span class="font-base text-gray-400"
+              >University Of San-Jose Recoletos <br />
+              2021 - Jan 2022</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section
+        id="experience"
+        class="bg-white drop-shadow-md rounded-lg px-5 xl:px-10 py-10 flex flex-col gap-8"
+      >
+        <!-- Section header with View Full Details link -->
+        <div class="flex items-center justify-between">
+          <h1 class="font-['Signika'] font-bold text-2xl text-[#111827]">
+            Experience
+          </h1>
+        </div>
+
+        <div class="flex flex-col gap-8">
+          <!-- Symph, Inc. -->
+          <div class="flex flex-col xl:flex-row gap-4 xl:gap-10">
+            <div class="xl:w-48 flex-shrink-0 flex flex-col gap-2 pt-1">
+              <span class="text-sm font-['Signika'] font-semibold text-blue-500"
+                >Feb 2026 – Present</span
+              >
+              <span
+                class="inline-flex items-center gap-1.5 text-xs font-['Signika'] font-semibold bg-blue-100 text-blue-700 rounded-full px-3 py-1 w-fit"
+              >
+                🏢 Internship / OJT
+              </span>
+            </div>
+            <div
+              class="flex-1 flex flex-col gap-3 border-l-2 border-blue-300 pl-6"
+            >
+              <div>
+                <h2 class="font-['Signika'] font-bold text-lg text-[#111827]">
+                  Full Stack Web / Mobile Developer
+                </h2>
+                <span class="font-['Signika'] text-gray-500 font-medium text-sm"
+                  >Symph, Inc.</span
+                >
+              </div>
+              <p class="font-['Signika'] text-gray-700 leading-7 text-justify">
+                Currently interning as a Full Stack Developer using
+                <span class="font-semibold text-[#111827]"
+                  >Nest.js, Next.js, TanStack Query,</span
+                >
+                and <span class="font-semibold text-[#111827]">Supabase</span>.
+                Day-to-day work includes fixing bugs, shipping new features, and
+                maintaining and improving the existing codebase across web and
+                mobile platforms.
+              </p>
+              <a
+                href="./experience.html#symph"
+                class="flex items-center gap-1 text-xs font-['Signika'] font-semibold text-blue-400 hover:text-blue-600 transition-colors w-fit group"
+              >
+                See more
+                <svg
+                  class="w-3 h-3 transition-transform group-hover:translate-x-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-100"></div>
+
+          <!-- Pet Care Pro — Freelance -->
+          <div class="flex flex-col xl:flex-row gap-4 xl:gap-10">
+            <div class="xl:w-48 flex-shrink-0 flex flex-col gap-2 pt-1">
+              <span
+                class="text-sm font-['Signika'] font-semibold text-purple-500"
+                >Dec 2024 – May 2025</span
+              >
+              <span
+                class="inline-flex items-center gap-1.5 text-xs font-['Signika'] font-semibold bg-purple-100 text-purple-700 rounded-full px-3 py-1 w-fit"
+              >
+                💼 Freelance
+              </span>
+            </div>
+            <div
+              class="flex-1 flex flex-col gap-3 border-l-2 border-purple-300 pl-6"
+            >
+              <div>
+                <h2 class="font-['Signika'] font-bold text-lg text-[#111827]">
+                  Full Stack Developer — Pet Care Pro
+                </h2>
+                <span class="font-['Signika'] text-gray-500 font-medium text-sm"
+                  >Mr. Mark &amp; Associates</span
+                >
+              </div>
+              <p class="font-['Signika'] text-gray-700 leading-7 text-justify">
+                Sole developer responsible for the frontend, backend, and
+                database of an all-in-one pet care platform built with
+                <span class="font-semibold text-[#111827]">Next.js</span> and
+                <span class="font-semibold text-[#111827]">Firebase</span>. The
+                platform covers pet doctor consultations, pet boarding, a pet
+                shop, pet sitter bookings, and memorial services.
+              </p>
+              <a
+                href="./experience.html#petcarepro"
+                class="flex items-center gap-1 text-xs font-['Signika'] font-semibold text-purple-400 hover:text-purple-600 transition-colors w-fit group"
+              >
+                See more
+                <svg
+                  class="w-3 h-3 transition-transform group-hover:translate-x-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section
+        id="skills"
+        class="bg-white drop-shadow-md rounded-lg px-5 xl:px-10 py-10 gap-5 flex flex-col"
+      >
+        <h1 class="font-['Signika'] font-bold text-2xl text-[#111827]">
+          Skills
+        </h1>
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+          <div class="flex flex-col gap-4">
+            <h1 class="font-['Signika'] text-lg text-[#111827]">
+              Programming Languages
+            </h1>
+            <div class="grid xl:grid-cols-3 gap-2">
+              <div
+                class="bg-gray-200 rounded-md text-center flex items-center justify-center"
+              >
+                Javascript
+              </div>
+              <div
+                class="bg-gray-200 rounded-md text-center flex items-center justify-center"
+              >
+                Typescript
+              </div>
+              <div
+                class="py-1 bg-gray-200 rounded-md text-center flex items-center justify-center"
+              >
+                Kotlin Programming
+              </div>
+              <div
+                class="py-1 bg-gray-200 rounded-md text-center flex items-center justify-center"
+              >
+                Golang Programming
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h1 class="font-['Signika'] text-lg text-[#111827]">Databases</h1>
+            <div class="grid xl:grid-cols-3 gap-2">
+              <div class="py-1 bg-gray-200 rounded-md text-center">MySQL</div>
+              <div class="py-1 bg-gray-200 rounded-md text-center">
+                Firebase
+              </div>
+              <div class="py-1 bg-gray-200 rounded-md text-center">
+                Appwrite
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h1 class="font-['Signika'] text-lg text-[#111827]">
+              Mobile Development and Design
+            </h1>
+            <div class="grid xl:grid-cols-3 gap-2">
+              <div class="py-1 bg-gray-200 rounded-md text-center">
+                React Native
+              </div>
+              <div class="py-1 bg-gray-200 rounded-md text-center">
+                Android Studio
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h1 class="font-['Signika'] text-lg text-[#111827]">
+              Web Development and Design
+            </h1>
+            <div class="grid xl:grid-cols-3 gap-2">
+              <div class="py-1 bg-gray-200 rounded-md text-center">Next.js</div>
+              <div class="py-1 bg-gray-200 rounded-md text-center">
+                React.js + Vite
+              </div>
+              <div class="py-1 bg-gray-200 rounded-md text-center">
+                Express.js
+              </div>
+              <div class="py-1 bg-gray-200 rounded-md text-center">
+                Tailwind CSS
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section
+        id="myProjects"
+        class="px-5 py-10 bg-white rounded-lg drop-shadow-md"
+      >
+        <div class="flex flex-col gap-4">
+          <!-- Section header with View All Projects link -->
+          <div class="flex items-center justify-between">
+            <h1 class="font-['Signika'] font-bold text-2xl text-[#111827]">
+              Recent Projects
+            </h1>
+            <a
+              href="./projects.html"
+              class="flex items-center gap-1.5 text-sm font-['Signika'] font-semibold text-blue-500 hover:text-blue-700 transition-colors group"
+            >
+              View All Projects
+              <svg
+                class="w-4 h-4 transition-transform group-hover:translate-x-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+              <h1 class="font-bold text-[#111827] text-lg">
+                RubberTapAI (Jun, 2025) – (Dec, 2025)
+              </h1>
+              <p
+                class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg"
+              >
+                A Machine Learning application for the rubber industry that uses
+                image classification to detect leaf diseases.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h1 class="font-bold text-[#111827] text-lg">
+                Smart Dustbin (Aug, 2025) – (Dec, 2025)
+              </h1>
+              <p
+                class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg"
+              >
+                A simple IoT-based smart trash bin that automatically opens its
+                lid using a proximity sensor.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h1 class="font-bold text-[#111827] text-lg">
+                Pet Care Pro (Dec, 2024) – (April, 2025)
+              </h1>
+              <p
+                class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg"
+              >
+                A web-based all-in-one pet care platform connecting pet owners
+                and service providers for consultations, boarding, shopping, pet
+                sitting, and memorials.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center font-['Signika'] text-gray-500 text-sm pb-4">
+        © 2026 Jacob Mary Tapere. All rights reserved.
+      </footer>
+    </div>
 
     <script src="/static/js/index.js"></script>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const bar1 = document.getElementById("bar1");
+      const bar2 = document.getElementById("bar2");
+      const bar3 = document.getElementById("bar3");
+      let open = false;
+
+      menuBtn.addEventListener("click", () => {
+        open = !open;
+        mobileMenu.classList.toggle("hidden", !open);
+        bar1.style.transform = open ? "translateY(8px) rotate(45deg)" : "";
+        bar2.style.opacity = open ? "0" : "1";
+        bar3.style.transform = open ? "translateY(-8px) rotate(-45deg)" : "";
+      });
+
+      function closeMobileMenu() {
+        open = false;
+        mobileMenu.classList.add("hidden");
+        bar1.style.transform = "";
+        bar2.style.opacity = "1";
+        bar3.style.transform = "";
+      }
+    </script>
   </body>
 </html>
