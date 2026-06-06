@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jacob Mary Tapere</title>
-    <meta
-      name="description"
-      content="My Name is Jacob Mary Tapere, a BSIT student at University of Cebu - Banilad. Experience in React.js + Vite, React Native, and a little bit of Golang."
+
+    <title>Jacob Mary Tapere | Full Stack Software Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.ico"
+      type="image/x-icon"
     />
     <meta property="og:title" content="Jacob Mary Tapere - Portfolio" />
     <meta property="og:image" content="/static/images/Profile_Picture.png" />
@@ -24,522 +33,837 @@
       content="Jacob Mary Tapere, Portfolio, BSIT, React, React Native, Golang, University of Cebu"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="shortcut icon"
-      href="/static/images/favicon.ico"
-      type="image/x-icon"
-    />
+
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --surface: #121212;
+        --surface-2: #171717;
+        --text: #f5f5f5;
+        --muted: #9d9d9d;
+        --accent: #00e5ff;
+        --border: rgba(255, 255, 255, 0.08);
+        --max: 1300px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Manrope", sans-serif;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 229, 255, 0.08),
+            transparent 25%
+          ),
+          radial-gradient(
+            circle at 80% 10%,
+            rgba(0, 229, 255, 0.05),
+            transparent 20%
+          ),
+          radial-gradient(
+            circle at 50% 90%,
+            rgba(0, 229, 255, 0.04),
+            transparent 25%
+          );
+        pointer-events: none;
+        z-index: -2;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .container {
+        width: min(92%, var(--max));
+        margin: auto;
+      }
+
+      nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(16px);
+        background: rgba(10, 10, 10, 0.75);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-inner {
+        width: min(92%, 1300px);
+        margin: auto;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .hero-bg {
+        position: absolute;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 13vw;
+        font-weight: 700;
+        opacity: 0.03;
+        white-space: nowrap;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      .hero h1 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(3rem, 8vw, 7rem);
+        line-height: 0.95;
+        margin-bottom: 1.2rem;
+      }
+
+      .hero h1 span {
+        color: var(--accent);
+      }
+
+      .typewriter {
+        font-size: 1.3rem;
+        color: var(--accent);
+        min-height: 35px;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 700px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .btn {
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: 0.35s;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: black;
+      }
+
+      .btn-secondary {
+        border: 1px solid var(--border);
+        color: white;
+      }
+
+      .btn:hover {
+        transform: translateY(-4px);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .stat-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 1.5rem;
+      }
+
+      .stat-card h3 {
+        font-size: 2rem;
+        color: var(--accent);
+      }
+
+      section {
+        padding: 120px 0;
+      }
+
+      .section-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2rem, 5vw, 4rem);
+        margin-bottom: 1rem;
+      }
+
+      .section-subtitle {
+        color: var(--muted);
+        margin-bottom: 4rem;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 2rem;
+      }
+
+      .card:hover {
+        border-color: rgba(0, 229, 255, 0.4);
+      }
+
+      .experience-item {
+        margin-bottom: 2rem;
+      }
+
+      .experience-item h3 {
+        font-size: 1.3rem;
+      }
+
+      .experience-item span {
+        color: var(--accent);
+      }
+
+      .experience-item ul {
+        margin-top: 1rem;
+        padding-left: 1.2rem;
+        color: var(--muted);
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 2rem;
+        transition: 0.4s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(0, 229, 255, 0.5);
+      }
+
+      .project-card h3 {
+        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+      }
+
+      .project-card p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin: 1.5rem 0;
+      }
+
+      .tag {
+        background: rgba(0, 229, 255, 0.08);
+        border: 1px solid rgba(0, 229, 255, 0.15);
+        color: var(--accent);
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+      }
+
+      .project-link {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .stack-category {
+        background: var(--surface);
+        border-radius: 24px;
+        padding: 2rem;
+        border: 1px solid var(--border);
+      }
+
+      .stack-category h3 {
+        margin-bottom: 1.5rem;
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+
+      .badge {
+        padding: 0.7rem 1rem;
+        border-radius: 999px;
+        background: #171717;
+        border: 1px solid var(--border);
+      }
+
+      .awards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .award {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 2rem;
+      }
+
+      .award h3 {
+        color: var(--accent);
+        margin-bottom: 0.7rem;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      .contact h2 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        margin-bottom: 1rem;
+      }
+
+      .contact p {
+        color: var(--muted);
+        max-width: 700px;
+        margin: auto;
+      }
+
+      .contact-links {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .contact-links a {
+        color: white;
+        text-decoration: none;
+        border: 1px solid var(--border);
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+      }
+
+      footer {
+        padding: 3rem 0;
+        text-align: center;
+        color: var(--muted);
+        border-top: 1px solid var(--border);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: none;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .stats {
+          margin-top: 2rem;
+        }
+
+        .hero {
+          padding-top: 120px;
+        }
+
+        .hero h1 {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-[#F9FAFB] flex flex-col">
-    <!-- ── Nav Header ── -->
-    <nav class="sticky top-0 z-50 bg-white drop-shadow-sm">
-      <div class="xl:px-[22%] px-[8%] flex items-center justify-between h-14">
-        <a
-          href="#"
-          class="font-['Signika'] font-bold text-[#111827] text-lg whitespace-nowrap"
-          >JMT</a
-        >
 
-        <!-- Desktop links -->
-        <ul
-          class="hidden md:flex items-center gap-6 font-['Signika'] font-medium text-[#111827]"
-        >
-          <li>
-            <a href="/about.html" class="hover:text-blue-500 transition-colors"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="/experience.html"
-              class="hover:text-blue-500 transition-colors"
-              >Experience</a
-            >
-          </li>
-          <li>
-            <a
-              href="/projects.html"
-              class="hover:text-blue-500 transition-colors"
-              >Projects</a
-            >
-          </li>
-          <li>
-            <a href="#skills" class="hover:text-blue-500 transition-colors"
-              >Skills</a
-            >
-          </li>
-          <li>
-            <a
-              href="./pechakucha.html"
-              class="bg-blue-500 text-white px-4 py-1.5 rounded-lg hover:bg-blue-600 transition-colors"
-            >
-              PechaKucha
-            </a>
-          </li>
-        </ul>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <div class="logo">JMT</div>
 
-        <!-- Mobile hamburger -->
-        <button
-          id="menuBtn"
-          class="md:hidden flex flex-col gap-1.5 p-1"
-          aria-label="Toggle menu"
-        >
-          <span
-            class="block w-6 h-0.5 bg-[#111827] transition-all duration-300"
-            id="bar1"
-          ></span>
-          <span
-            class="block w-6 h-0.5 bg-[#111827] transition-all duration-300"
-            id="bar2"
-          ></span>
-          <span
-            class="block w-6 h-0.5 bg-[#111827] transition-all duration-300"
-            id="bar3"
-          ></span>
-        </button>
-      </div>
-
-      <!-- Mobile dropdown -->
-      <div
-        id="mobileMenu"
-        class="hidden md:hidden bg-white border-t border-gray-100 xl:px-[22%] px-[8%] py-4 flex flex-col gap-4 font-['Signika'] font-medium text-[#111827]"
-      >
-        <a
-          href="/about.html"
-          class="hover:text-blue-500 transition-colors"
-          onclick="closeMobileMenu()"
-          >About</a
-        >
-        <a
-          href="/experience.html"
-          class="hover:text-blue-500 transition-colors"
-          onclick="closeMobileMenu()"
-          >Experience</a
-        >
-        <a
-          href="/projects.html"
-          class="hover:text-blue-500 transition-colors"
-          onclick="closeMobileMenu()"
-          >Projects</a
-        >
-        <a
-          href="#skills"
-          class="hover:text-blue-500 transition-colors"
-          onclick="closeMobileMenu()"
-          >Skills</a
-        >
-        <a
-          href="/pechakucha.html"
-          class="bg-blue-500 text-white text-center px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
-        >
-          PechaKucha
-        </a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#stack">Stack</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </nav>
 
-    <!-- ── Page content ── -->
-    <div class="py-8 xl:px-[22%] px-[8%] flex flex-col gap-10">
-      <!-- Hero -->
-      <section class="flex flex-col items-center gap-8">
-        <header class="mx-auto flex flex-col gap-4 xl:gap-2">
-          <h1
-            class="text-5xl text-center font-bold font-['Signika'] text-[#111827]"
-          >
-            Jacob Mary Tapere
-          </h1>
-          <p
-            class="text-lg font-['Signika'] text-[#111827] tracking-widest text-center"
-          >
-            Aspiring Software Engineer | BSIT Student at UC - Banilad
-          </p>
-        </header>
-        <div class="xl:flex-row flex-col flex gap-10">
-          <p class="text-black">
-            <span class="p-1 bg-gray-500 rounded-full">✉</span>
-            jacobmary.tapere007@gmail.com
-          </p>
-          <p><span class="px-1 rounded-full">✆</span> 0993 223 7994</p>
-          <div class="flex gap-3">
+    <section class="hero">
+      <div class="hero-bg">JACOB MARY TAPERE</div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Full Stack Software Engineer</div>
+
+            <h1>
+              Jacob Mary
+              <span>Tapere</span>
+            </h1>
+
+            <div class="typewriter"></div>
+
+            <p>
+              Building scalable web platforms, AI-powered applications,
+              real-time communication systems, and modern mobile experiences.
+              Focused on delivering software that solves real-world problems
+              through thoughtful engineering and exceptional user experiences.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-secondary">Hire Me</a>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <h3>4+</h3>
+              <p>Production Applications</p>
+            </div>
+
+            <div class="stat-card">
+              <h3>3+</h3>
+              <p>Years Experience</p>
+            </div>
+
+            <div class="stat-card">
+              <h3>10+</h3>
+              <p>Technologies</p>
+            </div>
+
+            <div class="stat-card">
+              <h3>AI</h3>
+              <p>Real-world Integration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <div class="container">
+        <h2 class="section-title">
+          Engineering Experiences, Not Just Applications.
+        </h2>
+
+        <p class="section-subtitle">
+          Full Stack Software Engineer based in Cebu City, Philippines.
+        </p>
+
+        <div class="about-grid">
+          <div class="card">
+            <p style="line-height: 1.9; color: var(--muted)">
+              I specialize in React.js, Next.js, React Native, Node.js, NestJS,
+              Go, WebSockets, and AI integration. My experience spans logistics
+              platforms, real-time communication systems, AI-powered agriculture
+              applications, and enterprise-scale software development.
+            </p>
+          </div>
+
+          <div class="card">
+            <p style="line-height: 1.9; color: var(--muted)">
+              Recently completed my internship at Symph, contributing to a large
+              Next.js + NestJS monorepo. I have also worked as a freelance full
+              stack developer, delivering production-ready systems from database
+              architecture to frontend implementation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="card">
+          <div class="experience-item">
+            <h3>Symph <span>• Feb 2026 – May 2026</span></h3>
+            <p>Full Stack Web / Mobile Developer Intern</p>
+
+            <ul>
+              <li>Built features in a Next.js + NestJS Nx monorepo.</li>
+              <li>Implemented role-based access control workflows.</li>
+              <li>Developed notification and shipment update systems.</li>
+              <li>Resolved PDF rendering and UI issues.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Freelance Developer <span>• Nov 2024 – Jun 2025</span></h3>
+
+            <ul>
+              <li>Delivered full-stack logistics platform solutions.</li>
+              <li>Converted Figma designs into production applications.</li>
+              <li>Integrated frontend systems with live databases.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Flying Tiger Express</h3>
+
+            <p>
+              Enterprise logistics and parcel delivery platform built with
+              modern monorepo architecture.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">NestJS</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">NX</span>
+            </div>
+
             <a
-              href="./static/resume/JACOB MARY TAPERE.pdf"
               target="_blank"
-              class="inline-flex items-center gap-1.5 text-sm font-['Signika'] font-medium text-white bg-blue-600 border-[1.5px] border-blue-600 rounded-lg px-4 py-1.5 hover:bg-blue-700 transition-colors"
+              class="project-link"
+              href="https://www.flyingtigers.express"
             >
-              View Resume
+              Visit Project →
             </a>
+          </div>
+
+          <div class="project-card">
+            <h3>RubberTapAI</h3>
+
+            <p>
+              AI-powered disease detection platform using TensorFlow and
+              computer vision for rubber plantations.
+            </p>
+
+            <div class="tags">
+              <span class="tag">React Native</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Appwrite</span>
+            </div>
+
             <a
-              href="./static/resume/JACOB MARY TAPERE.pdf"
-              download
-              class="inline-flex items-center gap-1.5 text-sm font-['Signika'] font-medium text-gray-600 border-[1.5px] border-gray-300 rounded-lg px-4 py-1.5 hover:bg-gray-100 transition-colors"
+              target="_blank"
+              class="project-link"
+              href="https://rubbertapaiadmin.netlify.app"
             >
-              Download
+              Visit Project →
             </a>
           </div>
-        </div>
-      </section>
 
-      <!-- About -->
-      <section
-        id="about"
-        class="gap-4 px-2 py-10 flex flex-col items-center justify-center bg-white rounded-lg drop-shadow-md h-full xl:justify-start xl:items-start xl:px-20 xl:py-6 xl:grid xl:grid-cols-3"
-      >
-        <div>
-          <img
-            class="h-52 w-52 rounded-full"
-            src="/static/images/Profile_Picture.png"
-            alt="Profile Picture"
-          />
-        </div>
-        <div class="col-span-2 flex flex-col gap-10">
-          <p
-            class="text-xl font-['Signika'] font-medium text-white text-center xl:text-start bg-blue-500 rounded-lg w-fit px-4 py-2"
-          >
-            About
-          </p>
-          <p
-            class="text-justify leading-8 font-medium font-['Signika'] text-gray-700"
-          >
-            I am 4th year student taking up a Bachelor of Science in Information
-            Technology at University of Cebu – Banilad, seek to apply with a
-            strong foundation in both front-end, and back-end development and a
-            passion for creating user friendly web applications, I am eager to
-            contribute to your team while gaining hands-on experience in a
-            dynamic work environment. I offer my practical knowledge in IT
-            concepts, hands-on project experience.
-          </p>
-          <p
-            class="text-center flex flex-col font-['Signika'] font-medium xl:text-start"
-          >
-            🎓 Bachelor of Science in Information Technology
-            <span class="font-base text-gray-400"
-              >University Of Cebu - Banilad<br />
-              2022 - PRESENT</span
-            >
-          </p>
-          <p
-            class="text-center flex flex-col font-['Signika'] font-medium xl:text-start"
-          >
-            🎓 Bachelor Of Science Tourism Management
-            <span class="font-base text-gray-400"
-              >University Of San-Jose Recoletos <br />
-              2021 - Jan 2022</span
-            >
-          </p>
-        </div>
-      </section>
+          <div class="project-card">
+            <h3>Pet Care Pro</h3>
 
-      <!-- Experience -->
-      <section
-        id="experience"
-        class="bg-white drop-shadow-md rounded-lg px-5 xl:px-10 py-10 flex flex-col gap-8"
-      >
-        <!-- Section header with View Full Details link -->
-        <div class="flex items-center justify-between">
-          <h1 class="font-['Signika'] font-bold text-2xl text-[#111827]">
-            Experience
-          </h1>
-        </div>
+            <p>
+              Multi-role pet services platform featuring five independent
+              dashboards and workflows.
+            </p>
 
-        <div class="flex flex-col gap-8">
-          <!-- Symph, Inc. -->
-          <div class="flex flex-col xl:flex-row gap-4 xl:gap-10">
-            <div class="xl:w-48 flex-shrink-0 flex flex-col gap-2 pt-1">
-              <span class="text-sm font-['Signika'] font-semibold text-blue-500"
-                >Feb 2026 – Present</span
-              >
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-['Signika'] font-semibold bg-blue-100 text-blue-700 rounded-full px-3 py-1 w-fit"
-              >
-                🏢 Internship / OJT
-              </span>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Firebase</span>
             </div>
-            <div
-              class="flex-1 flex flex-col gap-3 border-l-2 border-blue-300 pl-6"
-            >
-              <div>
-                <h2 class="font-['Signika'] font-bold text-lg text-[#111827]">
-                  Full Stack Web / Mobile Developer
-                </h2>
-                <span class="font-['Signika'] text-gray-500 font-medium text-sm"
-                  >Symph, Inc.</span
-                >
-              </div>
-              <p class="font-['Signika'] text-gray-700 leading-7 text-justify">
-                Currently interning as a Full Stack Developer using
-                <span class="font-semibold text-[#111827]"
-                  >Nest.js, Next.js, TanStack Query,</span
-                >
-                and <span class="font-semibold text-[#111827]">Supabase</span>.
-                Day-to-day work includes fixing bugs, shipping new features, and
-                maintaining and improving the existing codebase across web and
-                mobile platforms.
-              </p>
-              <a
-                href="./experience.html#symph"
-                class="flex items-center gap-1 text-xs font-['Signika'] font-semibold text-blue-400 hover:text-blue-600 transition-colors w-fit group"
-              >
-                See more
-                <svg
-                  class="w-3 h-3 transition-transform group-hover:translate-x-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
 
-          <div class="border-t border-gray-100"></div>
-
-          <!-- Pet Care Pro — Freelance -->
-          <div class="flex flex-col xl:flex-row gap-4 xl:gap-10">
-            <div class="xl:w-48 flex-shrink-0 flex flex-col gap-2 pt-1">
-              <span
-                class="text-sm font-['Signika'] font-semibold text-purple-500"
-                >Dec 2024 – May 2025</span
-              >
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-['Signika'] font-semibold bg-purple-100 text-purple-700 rounded-full px-3 py-1 w-fit"
-              >
-                💼 Freelance
-              </span>
-            </div>
-            <div
-              class="flex-1 flex flex-col gap-3 border-l-2 border-purple-300 pl-6"
-            >
-              <div>
-                <h2 class="font-['Signika'] font-bold text-lg text-[#111827]">
-                  Full Stack Developer — Pet Care Pro
-                </h2>
-                <span class="font-['Signika'] text-gray-500 font-medium text-sm"
-                  >Mr. Mark &amp; Associates</span
-                >
-              </div>
-              <p class="font-['Signika'] text-gray-700 leading-7 text-justify">
-                Sole developer responsible for the frontend, backend, and
-                database of an all-in-one pet care platform built with
-                <span class="font-semibold text-[#111827]">Next.js</span> and
-                <span class="font-semibold text-[#111827]">Firebase</span>. The
-                platform covers pet doctor consultations, pet boarding, a pet
-                shop, pet sitter bookings, and memorial services.
-              </p>
-              <a
-                href="./experience.html#petcarepro"
-                class="flex items-center gap-1 text-xs font-['Signika'] font-semibold text-purple-400 hover:text-purple-600 transition-colors w-fit group"
-              >
-                See more
-                <svg
-                  class="w-3 h-3 transition-transform group-hover:translate-x-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section
-        id="skills"
-        class="bg-white drop-shadow-md rounded-lg px-5 xl:px-10 py-10 gap-5 flex flex-col"
-      >
-        <h1 class="font-['Signika'] font-bold text-2xl text-[#111827]">
-          Skills
-        </h1>
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
-          <div class="flex flex-col gap-4">
-            <h1 class="font-['Signika'] text-lg text-[#111827]">
-              Programming Languages
-            </h1>
-            <div class="grid xl:grid-cols-3 gap-2">
-              <div
-                class="bg-gray-200 rounded-md text-center flex items-center justify-center"
-              >
-                Javascript
-              </div>
-              <div
-                class="bg-gray-200 rounded-md text-center flex items-center justify-center"
-              >
-                Typescript
-              </div>
-              <div
-                class="py-1 bg-gray-200 rounded-md text-center flex items-center justify-center"
-              >
-                Kotlin Programming
-              </div>
-              <div
-                class="py-1 bg-gray-200 rounded-md text-center flex items-center justify-center"
-              >
-                Golang Programming
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <h1 class="font-['Signika'] text-lg text-[#111827]">Databases</h1>
-            <div class="grid xl:grid-cols-3 gap-2">
-              <div class="py-1 bg-gray-200 rounded-md text-center">MySQL</div>
-              <div class="py-1 bg-gray-200 rounded-md text-center">
-                Firebase
-              </div>
-              <div class="py-1 bg-gray-200 rounded-md text-center">
-                Appwrite
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <h1 class="font-['Signika'] text-lg text-[#111827]">
-              Mobile Development and Design
-            </h1>
-            <div class="grid xl:grid-cols-3 gap-2">
-              <div class="py-1 bg-gray-200 rounded-md text-center">
-                React Native
-              </div>
-              <div class="py-1 bg-gray-200 rounded-md text-center">
-                Android Studio
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <h1 class="font-['Signika'] text-lg text-[#111827]">
-              Web Development and Design
-            </h1>
-            <div class="grid xl:grid-cols-3 gap-2">
-              <div class="py-1 bg-gray-200 rounded-md text-center">Next.js</div>
-              <div class="py-1 bg-gray-200 rounded-md text-center">
-                React.js + Vite
-              </div>
-              <div class="py-1 bg-gray-200 rounded-md text-center">
-                Express.js
-              </div>
-              <div class="py-1 bg-gray-200 rounded-md text-center">
-                Tailwind CSS
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section
-        id="myProjects"
-        class="px-5 py-10 bg-white rounded-lg drop-shadow-md"
-      >
-        <div class="flex flex-col gap-4">
-          <!-- Section header with View All Projects link -->
-          <div class="flex items-center justify-between">
-            <h1 class="font-['Signika'] font-bold text-2xl text-[#111827]">
-              Recent Projects
-            </h1>
             <a
-              href="./projects.html"
-              class="flex items-center gap-1.5 text-sm font-['Signika'] font-semibold text-blue-500 hover:text-blue-700 transition-colors group"
+              target="_blank"
+              class="project-link"
+              href="https://pet-care-pro.vercel.app"
             >
-              View All Projects
-              <svg
-                class="w-4 h-4 transition-transform group-hover:translate-x-0.5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              Visit Project →
             </a>
           </div>
 
-          <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
-            <div class="flex flex-col gap-2">
-              <h1 class="font-bold text-[#111827] text-lg">
-                RubberTapAI (Jun, 2025) – (Dec, 2025)
-              </h1>
-              <p
-                class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg"
-              >
-                A Machine Learning application for the rubber industry that uses
-                image classification to detect leaf diseases.
-              </p>
+          <div class="project-card">
+            <h3>ChutUpp</h3>
+
+            <p>
+              Secure real-time chat platform powered by Go, PostgreSQL, Firebase
+              Auth and WebSockets.
+            </p>
+
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Go</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">WebSockets</span>
             </div>
-            <div class="flex flex-col gap-2">
-              <h1 class="font-bold text-[#111827] text-lg">
-                Smart Dustbin (Aug, 2025) – (Dec, 2025)
-              </h1>
-              <p
-                class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg"
-              >
-                A simple IoT-based smart trash bin that automatically opens its
-                lid using a proximity sensor.
-              </p>
+
+            <a
+              target="_blank"
+              class="project-link"
+              href="https://chut-upp.vercel.app"
+            >
+              Visit Project →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Tech Stack</h2>
+
+        <div class="stack-grid">
+          <div class="stack-category">
+            <h3>Frontend</h3>
+            <div class="badges">
+              <span class="badge">Next.js</span>
+              <span class="badge">React.js</span>
+              <span class="badge">Vue.js</span>
+              <span class="badge">React Native</span>
+              <span class="badge">Expo</span>
+              <span class="badge">Jetpack Compose</span>
             </div>
-            <div class="flex flex-col gap-2">
-              <h1 class="font-bold text-[#111827] text-lg">
-                Pet Care Pro (Dec, 2024) – (April, 2025)
-              </h1>
-              <p
-                class="bg-gray-200 text-justify py-2 indent-1 xl:indent-4 font-medium text-gray-900 px-4 rounded-lg"
-              >
-                A web-based all-in-one pet care platform connecting pet owners
-                and service providers for consultations, boarding, shopping, pet
-                sitting, and memorials.
-              </p>
+          </div>
+
+          <div class="stack-category">
+            <h3>Backend</h3>
+            <div class="badges">
+              <span class="badge">NestJS</span>
+              <span class="badge">Node.js</span>
+              <span class="badge">Express</span>
+              <span class="badge">Go</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">Kotlin</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <h3>Databases</h3>
+            <div class="badges">
+              <span class="badge">Firebase</span>
+              <span class="badge">Supabase</span>
+              <span class="badge">MongoDB</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">Appwrite</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="text-center font-['Signika'] text-gray-500 text-sm pb-4">
-        © 2026 Jacob Mary Tapere. All rights reserved.
-      </footer>
-    </div>
+    <section class="reveal">
+      <div class="container">
+        <h2 class="section-title">Awards & Certifications</h2>
 
-    <script src="/static/js/index.js"></script>
+        <div class="awards">
+          <div class="award">
+            <h3>Innovate Cebu 2026</h3>
+            <p>Semi-Finalist — Visayan Electric Co. Track</p>
+          </div>
+
+          <div class="award">
+            <h3>UC CCS ICT Congress</h3>
+            <p>2nd Place — Networking Competition</p>
+          </div>
+
+          <div class="award">
+            <h3>Hack4Gov 2025</h3>
+            <p>Region 7 — 8th Placing Team</p>
+          </div>
+
+          <div class="award">
+            <h3>CCNA Certification</h3>
+            <p>Switching, Routing and Wireless Essentials</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+      <div class="container">
+        <h2>Let's Build Something Exceptional.</h2>
+
+        <p>
+          Interested in working together, discussing a project, or building
+          something ambitious? Let's connect.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:jacobmary.tapere007@gmail.com">
+            jacobmary.tapere007@gmail.com
+          </a>
+
+          <a href="tel:+639932237994"> +63 993 223 7994 </a>
+
+          <a target="_blank" href="https://jacob-mary-tapere.vercel.app">
+            Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 Jacob Mary Tapere • Full Stack Software Engineer</footer>
+
     <script>
-      const menuBtn = document.getElementById("menuBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const bar1 = document.getElementById("bar1");
-      const bar2 = document.getElementById("bar2");
-      const bar3 = document.getElementById("bar3");
-      let open = false;
+      const roles = [
+        "Full Stack Software Engineer",
+        "Next.js & React Specialist",
+        "AI Application Builder",
+        "Go Backend Developer",
+        "Real-Time Systems Engineer",
+      ];
 
-      menuBtn.addEventListener("click", () => {
-        open = !open;
-        mobileMenu.classList.toggle("hidden", !open);
-        bar1.style.transform = open ? "translateY(8px) rotate(45deg)" : "";
-        bar2.style.opacity = open ? "0" : "1";
-        bar3.style.transform = open ? "translateY(-8px) rotate(-45deg)" : "";
-      });
+      let i = 0;
+      let j = 0;
+      let current = "";
+      let deleting = false;
 
-      function closeMobileMenu() {
-        open = false;
-        mobileMenu.classList.add("hidden");
-        bar1.style.transform = "";
-        bar2.style.opacity = "1";
-        bar3.style.transform = "";
+      function type() {
+        const target = document.querySelector(".typewriter");
+
+        if (!deleting) {
+          current = roles[i].substring(0, j++);
+        } else {
+          current = roles[i].substring(0, j--);
+        }
+
+        target.textContent = current;
+
+        if (!deleting && j === roles[i].length + 1) {
+          deleting = true;
+          setTimeout(type, 1500);
+          return;
+        }
+
+        if (deleting && j === 0) {
+          deleting = false;
+          i = (i + 1) % roles.length;
+        }
+
+        setTimeout(type, deleting ? 50 : 90);
       }
+
+      type();
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => {
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>
