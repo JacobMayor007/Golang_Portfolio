@@ -137,6 +137,7 @@
       .nav-links {
         display: flex;
         gap: 2rem;
+        align-items: center;
       }
 
       .nav-links a {
@@ -147,6 +148,34 @@
 
       .nav-links a:hover {
         color: var(--accent);
+      }
+
+      .nav-icons {
+        display: flex;
+        gap: 1.1rem;
+        align-items: center;
+      }
+
+      .nav-icons a {
+        color: var(--muted);
+        display: flex;
+        transition: 0.3s;
+      }
+
+      .nav-icons a:hover {
+        color: var(--accent);
+      }
+
+      .nav-resume {
+        border: 1px solid var(--border);
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .nav-resume:hover {
+        border-color: rgba(0, 229, 255, 0.5);
       }
 
       .hero {
@@ -221,6 +250,9 @@
         border-radius: 12px;
         font-weight: 600;
         transition: 0.35s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
       }
 
       .btn-primary {
@@ -235,6 +267,28 @@
 
       .btn:hover {
         transform: translateY(-4px);
+      }
+
+      .hero-side {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .hero-photo-wrap {
+        display: flex;
+        margin-top: 120px;
+        justify-content: center;
+      }
+
+      .hero-photo {
+        width: 220px;
+        height: 220px;
+        border-radius: 28px;
+        object-fit: cover;
+        border: 1px solid var(--border);
+        box-shadow: 0 0 0 8px rgba(0, 229, 255, 0.04),
+          0 20px 60px rgba(0, 0, 0, 0.5);
       }
 
       .stats {
@@ -315,13 +369,36 @@
         background: var(--surface);
         border: 1px solid var(--border);
         border-radius: 24px;
-        padding: 2rem;
+        overflow: hidden;
         transition: 0.4s;
       }
 
       .project-card:hover {
         transform: translateY(-8px);
         border-color: rgba(0, 229, 255, 0.5);
+      }
+
+      .project-media {
+        width: 100%;
+        height: 190px;
+        overflow: hidden;
+        background: var(--surface-2);
+      }
+
+      .project-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 0.5s;
+      }
+
+      .project-card:hover .project-media img {
+        transform: scale(1.05);
+      }
+
+      .project-body {
+        padding: 2rem;
       }
 
       .project-card h3 {
@@ -350,10 +427,22 @@
         font-size: 0.85rem;
       }
 
+      .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+      }
+
       .project-link {
         color: var(--accent);
         text-decoration: none;
         font-weight: 600;
+      }
+
+      .project-link.disabled {
+        color: var(--muted);
+        font-weight: 500;
+        cursor: default;
       }
 
       .stack-grid {
@@ -433,6 +522,15 @@
         border: 1px solid var(--border);
         padding: 1rem 1.5rem;
         border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        transition: 0.3s;
+      }
+
+      .contact-links a:hover {
+        border-color: rgba(0, 229, 255, 0.5);
+        color: var(--accent);
       }
 
       footer {
@@ -489,6 +587,52 @@
           <a href="#projects">Projects</a>
           <a href="#stack">Stack</a>
           <a href="#contact">Contact</a>
+
+          <div class="nav-icons">
+            <a
+              href="https://github.com/JacobMayor007"
+              target="_blank"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jacob-mary-tapere-a84847311/"
+              target="_blank"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <a
+            href="/static/resume/JACOB MARY TAPERE.pdf"
+            download
+            class="nav-resume"
+          >
+            Resume
+          </a>
         </div>
       </div>
     </nav>
@@ -518,28 +662,45 @@
             <div class="hero-buttons">
               <a href="#projects" class="btn btn-primary">View Projects</a>
               <a href="#contact" class="btn btn-secondary">Hire Me</a>
+              <a
+                href="/static/resume/JACOB MARY TAPERE.pdf"
+                download
+                class="btn btn-secondary"
+              >
+                Download Resume
+              </a>
             </div>
           </div>
 
-          <div class="stats">
-            <div class="stat-card">
-              <h3>4+</h3>
-              <p>Production Applications</p>
+          <div class="hero-side">
+            <div class="hero-photo-wrap">
+              <img
+                src="/static/images/profile.png"
+                alt="Jacob Mary Tapere"
+                class="hero-photo"
+              />
             </div>
 
-            <div class="stat-card">
-              <h3>3+</h3>
-              <p>Years Experience</p>
-            </div>
+            <div class="stats">
+              <div class="stat-card">
+                <h3>4+</h3>
+                <p>Production Applications</p>
+              </div>
 
-            <div class="stat-card">
-              <h3>10+</h3>
-              <p>Technologies</p>
-            </div>
+              <div class="stat-card">
+                <h3>3+</h3>
+                <p>Years Experience</p>
+              </div>
 
-            <div class="stat-card">
-              <h3>AI</h3>
-              <p>Real-world Integration</p>
+              <div class="stat-card">
+                <h3>10+</h3>
+                <p>Technologies</p>
+              </div>
+
+              <div class="stat-card">
+                <h3>AI</h3>
+                <p>Real-world Integration</p>
+              </div>
             </div>
           </div>
         </div>
@@ -614,99 +775,162 @@
 
         <div class="projects-grid">
           <div class="project-card">
-            <h3>Flying Tiger Express</h3>
-
-            <p>
-              Enterprise logistics and parcel delivery platform built with
-              modern monorepo architecture.
-            </p>
-
-            <div class="tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">NestJS</span>
-              <span class="tag">Supabase</span>
-              <span class="tag">Firebase</span>
-              <span class="tag">NX</span>
+            <div class="project-media">
+              <img
+                src="/static/images/FlyingTigerExpress.png"
+                alt="Flying Tiger Express"
+              />
             </div>
 
-            <a
-              target="_blank"
-              class="project-link"
-              href="https://www.flyingtigers.express"
-            >
-              Visit Project →
-            </a>
+            <div class="project-body">
+              <h3>Flying Tiger Express</h3>
+
+              <p>
+                Enterprise logistics and parcel delivery platform built with
+                modern monorepo architecture. Built during my internship at
+                Symph.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">NestJS</span>
+                <span class="tag">Supabase</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">NX</span>
+              </div>
+
+              <div class="project-links">
+                <span class="project-link disabled"
+                  >Repo Private (Internship)</span
+                >
+                <a
+                  target="_blank"
+                  class="project-link"
+                  href="https://www.flyingtigers.express"
+                >
+                  Live Link →
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="project-card">
-            <h3>RubberTapAI</h3>
-
-            <p>
-              AI-powered disease detection platform using TensorFlow and
-              computer vision for rubber plantations.
-            </p>
-
-            <div class="tags">
-              <span class="tag">React Native</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Firebase</span>
-              <span class="tag">Appwrite</span>
+            <div class="project-media">
+              <img src="/static/images/RubberTapAI.png" alt="RubberTapAI" />
             </div>
 
-            <a
-              target="_blank"
-              class="project-link"
-              href="https://rubbertapaiadmin.netlify.app"
-            >
-              Visit Project →
-            </a>
+            <div class="project-body">
+              <h3>RubberTapAI</h3>
+
+              <p>
+                AI-powered disease detection platform using TensorFlow and
+                computer vision for rubber plantations.
+              </p>
+
+              <div class="tags">
+                <span class="tag">React Native</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Appwrite</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  target="_blank"
+                  class="project-link"
+                  href="https://github.com/JacobMayor007/RubberTapAI_Expo"
+                >
+                  Code →
+                </a>
+                <a
+                  target="_blank"
+                  class="project-link"
+                  href="https://rubbertapaiadmin.netlify.app"
+                >
+                  Visit Admin →
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="project-card">
-            <h3>Pet Care Pro</h3>
-
-            <p>
-              Multi-role pet services platform featuring five independent
-              dashboards and workflows.
-            </p>
-
-            <div class="tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">Firebase</span>
+            <div class="project-media">
+              <img src="/static/images/Pet_Care_Pro.png" alt="Pet Care Pro" />
             </div>
 
-            <a
-              target="_blank"
-              class="project-link"
-              href="https://pet-care-pro.vercel.app"
-            >
-              Visit Project →
-            </a>
+            <div class="project-body">
+              <h3>Pet Care Pro</h3>
+
+              <p>
+                Multi-role pet services platform featuring five independent
+                dashboards and workflows.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Firebase</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  target="_blank"
+                  class="project-link"
+                  href="https://github.com/JacobMayor007/Pet_Care"
+                >
+                  Code →
+                </a>
+                <a
+                  target="_blank"
+                  class="project-link"
+                  href="https://pet-care-pro.vercel.app/Login"
+                >
+                  Live Link →
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="project-card">
-            <h3>ChutUpp</h3>
-
-            <p>
-              Secure real-time chat platform powered by Go, PostgreSQL, Firebase
-              Auth and WebSockets.
-            </p>
-
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Go</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">WebSockets</span>
+            <div class="project-media">
+              <img
+                src="/static/images/websocket_gif.gif"
+                alt="ChutUpp real-time chat demo"
+              />
             </div>
 
-            <a
-              target="_blank"
-              class="project-link"
-              href="https://chut-upp.vercel.app"
-            >
-              Visit Project →
-            </a>
+            <div class="project-body">
+              <h3>ChutUpp</h3>
+
+              <p>
+                Secure real-time chat platform powered by Go, PostgreSQL,
+                Firebase Auth and WebSockets.
+              </p>
+
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Go</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">WebSockets</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  target="_blank"
+                  class="project-link"
+                  href="https://github.com/JacobMayor007/ChutUpp"
+                >
+                  Code →
+                </a>
+                <a
+                  target="_blank"
+                  class="project-link"
+                  href="https://chut-upp.vercel.app"
+                >
+                  Live Link →
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -799,6 +1023,21 @@
           </a>
 
           <a href="tel:+639932237994"> +63 993 223 7994 </a>
+
+          <a href="https://github.com/JacobMayor007" target="_blank">
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/jacob-mary-tapere-a84847311/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+
+          <a href="/static/resume/JACOB MARY TAPERE.pdf" download>
+            Download Resume
+          </a>
         </div>
       </div>
     </section>
